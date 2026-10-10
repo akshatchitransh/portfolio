@@ -1,897 +1,295 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Akshat Chitransh</title>
-
-    <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <link rel="stylesheet"
-href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet">
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b14">
+  <meta name="description" content="Akshat Chitransh — software developer building backend systems, AI-powered tools, and performance-focused software.">
+  <title>Akshat Chitransh | Software Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
 
-    <!-- Navbar -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="logo" href="#home" aria-label="Akshat home"><span>ac</span><i>.</i></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+      </ul>
+      <a class="nav-contact" href="#contact">Let's talk <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </nav>
+  </header>
 
-    <header>
-
-        <nav class="navbar">
-
-            <div class="logo">
-                AC
-            </div>
-
-            <ul class="nav-links" id="navLinks">
-
-                <li><a href="#about">About</a></li>
-
-                <li><a href="#education">Education</a></li>
-
-                <li><a href="#skills">Skills</a></li>
-
-                <li><a href="#experience">Experience</a></li>
-
-                <li><a href="#projects">Projects</a></li>
-
-                <li><a href="#achievements">Achievements</a></li>
-
-                <li><a href="#contact">Contact</a></li>
-
-            </ul>
-
-            <div class="hamburger"
-                 id="hamburger">
-
-                <i class="fa-solid fa-bars"></i>
-
-            </div>
-
-        </nav>
-
-    </header>
-
-    <!-- Hero -->
-
-    <section class="hero">
-
-        <h1>
-            Hello, I'm
-            <span id="typing"></span>
-        </h1>
-
-        <h2>
-            Full Stack Developer |
-            Backend Enthusiast
-        </h2>
-
-        <p>
-            Passionate about scalable backend systems,
-            artificial intelligence applications,
-            and solving complex algorithmic problems.
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> OPEN TO SOFTWARE ENGINEERING OPPORTUNITIES</p>
+        <h1>Building software<br>that <span class="gradient-text">does the work.</span></h1>
+        <p class="hero-description">
+          I'm Akshat Chitransh, a developer interested in backend engineering,
+          distributed systems, and AI-powered developer tools. I like turning
+          complex problems into practical, measurable systems.
         </p>
-
-        <div class="hero-buttons">
-
-            <a href="#projects"
-               class="btn">
-
-                View Projects
-
-            </a>
-
-            <a href="resume.pdf"
-               class="btn-outline"
-               download>
-
-                Download Resume
-
-            </a>
-
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore my work <i class="fa-solid fa-arrow-right"></i></a>
+          <a class="button button-secondary" href="resume.pdf" target="_blank" rel="noopener">View resume <i class="fa-regular fa-file-lines"></i></a>
         </div>
+        <div class="hero-socials">
+          <a href="https://github.com/akshatchitranshh" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://www.linkedin.com/in/geekyakshat/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a href="https://leetcode.com/u/akshat_chitransh/" target="_blank" rel="noopener"><i class="fa-solid fa-code"></i> LeetCode</a>
+        </div>
+      </div>
 
+      <div class="hero-visual" aria-label="Developer terminal illustration">
+        <div class="terminal-window">
+          <div class="terminal-top">
+            <div class="terminal-dots"><span></span><span></span><span></span></div>
+            <span>akshat@dev: ~/projects</span>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <div class="terminal-body">
+            <p><span class="terminal-muted">01</span> <span class="terminal-purple">const</span> developer = {</p>
+            <p class="indent"><span class="terminal-blue">focus</span>: <span class="terminal-green">"backend systems"</span>,</p>
+            <p class="indent"><span class="terminal-blue">building</span>: [</p>
+            <p class="indent2"><span class="terminal-green">"AegisProxy"</span>,</p>
+            <p class="indent2"><span class="terminal-green">"Terminal Coding Agent"</span>,</p>
+            <p class="indent2"><span class="terminal-green">"AI CI/CD Analyzer"</span></p>
+            <p class="indent">],</p>
+            <p class="indent"><span class="terminal-blue">mindset</span>: <span class="terminal-green">"measure, iterate"</span></p>
+            <p>};</p>
+            <p class="terminal-prompt"><span>➜</span> <span class="cursor"></span></p>
+          </div>
+          <div class="terminal-footer">
+            <span><i class="fa-solid fa-circle-check"></i> Ready to build</span>
+            <span>UTF-8 · TypeScript</span>
+          </div>
+        </div>
+        <div class="floating-chip chip-top"><i class="fa-solid fa-bolt"></i> Performance-minded</div>
+        <div class="floating-chip chip-bottom"><i class="fa-solid fa-cubes"></i> Systems + AI</div>
+      </div>
+      <a class="scroll-cue" href="#about"><span></span> Scroll to explore</a>
     </section>
 
-    <!-- About -->
-
-    <section class="section"
-             id="about">
-
-        <h2 class="section-title">
-            About Me
-        </h2>
-
-        <div class="underline"></div>
-
-        <div class="card">
-
-            <p>
-                I'm Akshat Chitransh, a B.Tech student
-                at IIIT Bhopal specializing in
-                Electronics and Communication Engineering.
-            </p>
-
-            <br>
-
-            <p>
-                I enjoy building scalable applications,
-                backend systems, AI-powered tools,
-                vector databases, and event-driven
-                architectures.
-            </p>
-
-            <br>
-
-            <p>
-                My interests include Full Stack
-                Development, System Design,
-                Distributed Systems and DSA.
-            </p>
-
+    <section class="section container" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">01 / ABOUT</p>
+        <h2>A little about <span class="gradient-text">how I build.</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy panel">
+          <p class="large-copy">I enjoy engineering software beyond the happy path — thinking about latency, failure recovery, safe execution, and maintainable APIs.</p>
+          <p>I'm pursuing a B.Tech at IIIT Bhopal. My work spans C++ networking, backend development, and LLM-powered tools. I value clear engineering trade-offs, measurable outcomes, and learning by building.</p>
+          <div class="about-links">
+            <a href="mailto:akshat.chitransh3108@gmail.com">akshat.chitransh3108@gmail.com <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
         </div>
-
+        <div class="about-stats">
+          <article class="stat-card"><span class="stat-number">10.7×</span><span class="stat-label">Higher proxy throughput</span><p>Measured against the baseline in my proxy tests.</p></article>
+          <article class="stat-card"><span class="stat-number">27×</span><span class="stat-label">Lower cache-hit latency</span><p>Reduced from around 81 ms to 3 ms.</p></article>
+          <article class="stat-card"><span class="stat-number">400+</span><span class="stat-label">DSA problems solved</span><p>Across LeetCode and other platforms, per resume.</p></article>
+          <article class="stat-card"><span class="stat-number">8.66</span><span class="stat-label">CGPA / 10</span><p>IIIT Bhopal · B.Tech · 2023–2027</p></article>
+        </div>
+      </div>
     </section>
 
-    <!-- Education -->
+    <section class="section container" id="experience">
+      <div class="section-heading">
+        <p class="eyebrow">02 / EXPERIENCE</p>
+        <h2>Where I've <span class="gradient-text">contributed.</span></h2>
+      </div>
 
-    <section class="section"
-             id="education">
-
-        <h2 class="section-title">
-            Education
-        </h2>
-
-        <div class="underline"></div>
-
-        <div class="card">
-
-            <h3>
-                IIIT Bhopal
-            </h3>
-
-            <br>
-
-            <p>
-                Bachelor of Technology
-            </p>
-
-            <p>
-                Electronics and Communication Engineering
-            </p>
-
-            <p>
-                2023 – 2027
-            </p>
-
-            <p>
-                CGPA: 8.66
-            </p>
-
+      <article class="experience-card panel">
+        <div class="experience-top">
+          <div>
+            <p class="eyebrow">REMOTE · MAR 2026 — MAY 2026</p>
+            <h3>Full Stack Developer Intern</h3>
+            <p class="company">Raizzify</p>
+          </div>
+          <span class="experience-icon"><i class="fa-solid fa-code"></i></span>
         </div>
+        <ul class="clean-list">
+          <li>Engineered 10+ reusable React components across 5+ internal pages to improve UI consistency and development velocity.</li>
+          <li>Developed REST APIs and automated WhatsApp communication workflows.</li>
+          <li>Implemented server-side validation and error handling to improve application reliability.</li>
+        </ul>
+      </article>
 
-        <div class="card">
-
-            <h3>
-                Relevant Coursework
-            </h3>
-
-            <br>
-
-            <p>
-                Data Structures & Algorithms
-            </p>
-
-            <p>
-                DBMS
-            </p>
-
-            <p>
-                OOP
-            </p>
-
-            <p>
-                Computer Networks
-            </p>
-
+      <article class="experience-card panel">
+        <div class="experience-top">
+          <div>
+            <p class="eyebrow">OPEN SOURCE · 2026</p>
+            <h3>API Dash — Contribution #1804</h3>
+            <p class="company">AI-response validation for StacToFlutterBot</p>
+          </div>
+          <span class="experience-icon"><i class="fa-brands fa-github"></i></span>
         </div>
-
+        <ul class="clean-list">
+          <li>Built a lightweight validator to reject empty, conversational, refusal, and structurally invalid responses while preserving valid Flutter/Dart code.</li>
+          <li>Added 25 unit tests covering malformed responses, code fences, Flutter widgets, helper classes, and edge cases.</li>
+          <li>Contributed to an existing Flutter/Dart codebase through independent testing and code review.</li>
+        </ul>
+      </article>
     </section>
 
-    <!-- Skills -->
-
-    <section class="section"
-             id="skills">
-
-        <h2 class="section-title">
-            Programming Languages
-        </h2>
-
-        <div class="underline"></div>
-
-        <div class="grid">
-
-           <div class="skill-card">
-
-    <i class="devicon-cplusplus-plain colored"></i>
-
-    <h3>C++</h3>
-
-</div>
-
-
-           <div class="skill-card">
-
-   
-            <i class="devicon-python-plain colored"></i>
-          
-
-    <h3>Python</h3>
-
-</div>
-
-
-            <div class="skill-card">
-
-    
-           
-            <i class="devicon-javascript-plain colored"></i>
-          
-          
-
-    <h3>Javascript</h3>
-
-</div>
-
-
-           
-           <div class="skill-card">
-
-   
-            
-            <i class="devicon-c-original colored"></i>
-          
-          
-
-    <h3>C</h3>
-
-</div>
-
-
-           
-           <div class="skill-card">
-
-   
-           
-            <i class="devicon-html5-plain colored"></i>
-          
-          
-
-    <h3>HTML</h3>
-
-</div>
-
-
-             <div class="skill-card">
-
-   
-           
-            <i class="devicon-css3-plain colored"></i>
-          
-          
-
-    <h3>CSS</h3>
-
-</div>
-
- <div class="skill-card">
-
-   
-           
-            <i class="devicon-mysql-original colored"></i>
-          
-          
-
-    <h3>MYSQL</h3>
-
-</div>
-
- <div class="skill-card">
-
-   
-           
-            <i class="devicon-matlab-plain colored"></i>
-          
-          
-
-    <h3>MATLAB</h3>
-
-</div>
-
- <div class="skill-card">
-
-   
-            
-            <i class="devicon-mongodb-plain colored"></i>
-          
-          
-
-    <h3>MongoDB</h3>
-
-</div>
-
-        </div>
-
-    </section>
-
-    <!-- Technologies -->
-
-    <section class="section">
-
-        <h2 class="section-title">
-            Technologies
-        </h2>
-
-        <div class="underline"></div>
-
-        <div class="grid">
-
-    <div class="skill-card">
-
-        <i class="devicon-nodejs-plain-wordmark colored"></i>
-
-        <h3>Node.js</h3>
-
-    </div>
-
-    <div class="skill-card">
-
-        <i class="devicon-express-original colored"></i>
-
-        <h3>Express.js</h3>
-
-    </div>
-
-    <div class="skill-card">
-
-        <i class="devicon-react-original colored"></i>
-
-        <h3>React.js</h3>
-
-    </div>
-
-    <div class="skill-card">
-
-        <i class="devicon-nextjs-original-wordmark colored"></i>
-
-        <h3>Next.js</h3>
-
-    </div>
-
-    <div class="skill-card">
-
-        <i class="devicon-mongodb-plain colored"></i>
-
-        <h3>MongoDB</h3>
-
-    </div>
-
-    <div class="skill-card">
-
-        <i class="devicon-postgresql-plain colored"></i>
-
-        <h3>PostgreSQL</h3>
-
-    </div>
-
-    <div class="skill-card">
-
-        <i class="devicon-docker-plain colored"></i>
-
-        <h3>Docker</h3>
-
-    </div>
-
-    <div class="skill-card">
-
-        <i class="devicon-graphql-plain colored"></i>
-
-        <h3>GraphQL</h3>
-
-    </div>
-
-    <div class="skill-card">
-
-        <i class="fa-solid fa-brain"></i>
-
-        <h3>OpenAI</h3>
-
-    </div>
-
-    <div class="skill-card">
-
-        <i class="fa-solid fa-database"></i>
-
-        <h3>Pinecone</h3>
-
-    </div>
-
-</div>
-
-    </section>
-
-    <!-- Experience -->
-
-    <section class="section"
-             id="experience">
-
-        <h2 class="section-title">
-            Experience
-        </h2>
-
-        <div class="underline"></div>
-
-        <div class="timeline">
-
-            <div class="timeline-card">
-
-                <span class="date">
-                    Mar 2026 – May 2026
-                </span>
-
-                <h3>
-                    Full Stack Developer
-                </h3>
-
-                <h4>
-                    Raizzify (Remote)
-                </h4>
-
-                <ul>
-
-                    <li>
-                        Developed custom WhatsApp communication workflows.
-                    </li>
-
-                    <li>
-                        Created responsive modal interfaces.
-                    </li>
-
-                    <li>
-                        Improved UI responsiveness.
-                    </li>
-
-                    <li>
-                        Collaborated using Git and GitHub.
-                    </li>
-
-                    <li>
-                        Participated in frontend-backend integration.
-                    </li>
-
-                </ul>
-
+    <section class="section container" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">03 / SELECTED WORK</p>
+        <h2>Projects built to <span class="gradient-text">solve real problems.</span></h2>
+        <p class="section-subtitle">Systems programming, AI tooling, and backend engineering.</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card project-featured">
+          <div class="project-art proxy-art">
+            <div class="art-label"><i class="fa-solid fa-network-wired"></i> SYSTEMS / C++</div>
+            <div class="proxy-diagram">
+              <span>CLIENTS</span><i class="fa-solid fa-arrow-right"></i>
+              <div class="proxy-core">
+                <i class="fa-solid fa-server"></i>
+                <b>AegisProxy</b>
+                <small>Worker pool · LRU cache</small>
+              </div>
+              <i class="fa-solid fa-arrow-right"></i><span>ORIGIN</span>
             </div>
-
-        </div>
-
-    </section>
-
-    <!-- Projects -->
-
-    <section class="section"
-             id="projects">
-
-        <h2 class="section-title">
-            Projects
-        </h2>
-
-        <div class="underline"></div>
-
-        <!-- Project 1 -->
-
-        <div class="project-card">
-
-            <h3>
-                AI-Powered CI/CD Debugging Platform
-            </h3>
-
+            <div class="art-metric"><strong>10.7×</strong><span>throughput improvement</span></div>
+          </div>
+          <div class="project-content">
+            <div class="project-kicker">01 — NETWORKING & PERFORMANCE</div>
+            <h3>AegisProxy — Multithreaded Proxy Server</h3>
+            <p>Built an HTTP/HTTPS forwarding proxy with concurrent TCP connection handling. A worker-thread pool, bounded queue, and thread-safe LRU cache improve throughput and cache-hit response time.</p>
+            <div class="metric-row">
+              <span><b>10.7×</b> higher throughput</span>
+              <span><b>27×</b> lower latency</span>
+            </div>
             <div class="tags">
-
-                <span>Node.js</span>
-
-                <span>TypeScript</span>
-
-                <span>OpenAI</span>
-
-                <span>MongoDB</span>
-
+              <span>C++</span><span>Winsock2</span><span>Multithreading</span><span>TCP/IP</span><span>LRU Cache</span>
             </div>
+            <div class="project-links">
+              <a href="https://github.com/search?q=user%3Aakshatchitranshh+AegisProxy&type=repositories" target="_blank" rel="noopener">Find repository <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </article>
 
-            <ul>
-
-                <li>Designed scalable log-processing pipelines.</li>
-
-                <li>Implemented real-time failure detection.</li>
-
-                <li>Integrated OpenAI APIs.</li>
-
-                <li>Generated automated debugging reports.</li>
-
-                <li>Reduced developer debugging time.</li>
-
-            </ul>
-
-            <br>
-
-            <div class="project-buttons">
-
-    <a href="#"
-       target="_blank"
-       class="project-btn">
-
-        <i class="fa-solid fa-globe"></i>
-        Live Demo
-
-    </a>
-
-    <a href="https://github.com/akshatchitransh/CICD-AUTOMATION-_BACK"
-       target="_blank"
-       class="project-btn">
-
-        <i class="fa-brands fa-github"></i>
-        GitHub
-
-    </a>
-
-    <a href="https://youtu.be/2Mv6hbRyAwM?si=WV_nWllzAyWABJJk"
-       target="_blank"
-       class="project-btn">
-
-        <i class="fa-solid fa-video"></i>
-        Demo Video
-
-    </a>
-
-</div>
-
-        </div>
-
-        <!-- Project 2 -->
-
-        <div class="project-card">
-
-            <h3>
-                Memory – Solution to Your Favorite Links
-            </h3>
-
+        <article class="project-card">
+          <div class="project-art agent-art">
+            <div class="art-label"><i class="fa-solid fa-terminal"></i> DEVELOPER TOOLS / AI</div>
+            <div class="agent-code">
+              <p><span class="code-purple">agent</span>.<span class="code-blue">inspect</span>(<span class="code-green">"codebase"</span>)</p>
+              <p><span class="code-purple">agent</span>.<span class="code-blue">edit</span>(<span class="code-green">"files"</span>)</p>
+              <p><span class="code-purple">agent</span>.<span class="code-blue">runTests</span>()</p>
+              <p class="code-comment">// isolated execution environment</p>
+            </div>
+            <div class="agent-orbit orbit-one"></div>
+            <div class="agent-orbit orbit-two"></div>
+          </div>
+          <div class="project-content">
+            <div class="project-kicker">02 — LLM AGENT & SANDBOXING</div>
+            <h3>Terminal Coding Agent</h3>
+            <p>An LLM-powered terminal agent that inspects code, edits files, and runs commands. Test failures can feed an automated debugging-and-recovery loop, while execution runs in an isolated sandbox to reduce risk to the host system.</p>
             <div class="tags">
-
-                <span>Pinecone</span>
-
-                <span>MongoDB</span>
-
-                <span>OpenAI</span>
-
+              <span>TypeScript</span><span>Node.js</span><span>Groq API</span><span>Docker</span><span>REST APIs</span>
             </div>
+            <div class="project-links">
+              <a href="https://github.com/search?q=user%3Aakshatchitranshh+terminal+coding+agent&type=repositories" target="_blank" rel="noopener">Find repository <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </article>
 
-            <ul>
-
-                <li>Built semantic search system.</li>
-
-                <li>Integrated vector embeddings.</li>
-
-                <li>Implemented similarity search.</li>
-
-                <li>Enhanced search accuracy.</li>
-
-                <li>Optimized performance.</li>
-
-            </ul>
-
-            <br>
-
-         <div class="project-buttons">
-
-    <a href="https://brainji-front.vercel.app/"
-       target="_blank"
-       class="project-btn">
-
-        <i class="fa-solid fa-globe"></i>
-        Live Demo
-
-    </a>
-
-    <a href="https://github.com/akshatchitransh/BRAINJI"
-       target="_blank"
-       class="project-btn">
-
-        <i class="fa-brands fa-github"></i>
-        GitHub
-
-    </a>
-
-    <a href="https://youtu.be/f24eiHdFjy8?si=c7iwKuWbG1Q8LNqq"
-       target="_blank"
-       class="project-btn">
-
-        <i class="fa-solid fa-video"></i>
-        Demo Video
-
-    </a>
-
-</div>
-
-        </div>
-
-        <!-- Project 3 -->
-
-        <div class="project-card">
-
-            <h3>
-                AlgoMind: AI Coding Feedback System
-            </h3>
-
+        <article class="project-card">
+          <div class="project-art cicd-art">
+            <div class="art-label"><i class="fa-solid fa-chart-line"></i> BACKEND / AI</div>
+            <div class="log-window">
+              <div class="log-head"><span></span><span></span><span></span><b>failure-analysis.log</b></div>
+              <p><em>14:02:11</em> <span class="log-error">ERROR</span> Build step failed</p>
+              <p><em>14:02:12</em> Top error patterns extracted</p>
+              <p><em>14:02:13</em> <span class="log-ok">✓</span> Root-cause summary ready</p>
+              <div class="log-progress"><span></span></div>
+            </div>
+            <div class="cicd-badge"><strong>−98.3%</strong><small>API latency</small></div>
+          </div>
+          <div class="project-content">
+            <div class="project-kicker">03 — CI/CD OBSERVABILITY</div>
+            <h3>AI-Powered CI/CD Failure Analysis</h3>
+            <p>Built a platform to analyze CI/CD logs and prioritize likely causes. Redis caching, intelligent log filtering, and Top-5 error prioritization reduce repeated model work and help developers troubleshoot faster.</p>
+            <div class="metric-row">
+              <span><b>98.3%</b> lower API latency</span>
+              <span><b>45%+</b> fewer LLM tokens</span>
+            </div>
             <div class="tags">
-
-                <span>Neo4j</span>
-
-                <span>Qwen</span>
-
-                <span>Docker</span>
-
+              <span>React</span><span>Node.js</span><span>MongoDB</span><span>Gemini API</span><span>GitHub Actions</span><span>Redis</span>
             </div>
-
-            <ul>
-
-                <li>Developed browser extension.</li>
-
-                <li>Captured coding errors.</li>
-
-                <li>Implemented graph queries.</li>
-
-                <li>Integrated Neo4j database.</li>
-
-                <li>Generated AI-powered feedback.</li>
-
-            </ul>
-
-            <br>
-<div class="project-buttons">
-
-    <a href="#"
-       target="_blank"
-       class="project-btn">
-
-        <i class="fa-solid fa-globe"></i>
-        Live Demo
-
-    </a>
-
-    <a href="https://github.com/akshatchitransh/Algo_Mind-Extension"
-       target="_blank"
-       class="project-btn">
-
-        <i class="fa-brands fa-github"></i>
-        GitHub
-
-    </a>
-
-    <a href="#"
-       target="_blank"
-       class="project-btn">
-
-        <i class="fa-solid fa-video"></i>
-        Demo Video
-
-    </a>
-
-</div>
-
-        </div>
-
+            <div class="project-links">
+              <a href="https://github.com/akshatchitranshh/CICD-AUTOMATION-_BACK" target="_blank" rel="noopener">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://youtu.be/2Mv6hbRyAwM?si=WV_nWllzAyWABJJk" target="_blank" rel="noopener">Demo video <i class="fa-solid fa-play"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="project-note"><i class="fa-solid fa-circle-info"></i> Replace the AegisProxy and Terminal Coding Agent search links with direct repository URLs when available.</p>
     </section>
 
-    <!-- Achievements -->
+    <section class="section container" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">04 / TOOLKIT</p>
+        <h2>Tools I use to <span class="gradient-text">get things done.</span></h2>
+      </div>
+      <div class="skills-layout">
+        <article class="skill-group panel"><div class="skill-group-icon"><i class="fa-solid fa-code"></i></div><h3>Languages</h3><div class="tags"><span>C++</span><span>JavaScript</span><span>TypeScript</span><span>Python</span><span>SQL</span></div></article>
+        <article class="skill-group panel"><div class="skill-group-icon"><i class="fa-solid fa-server"></i></div><h3>Backend & Systems</h3><div class="tags"><span>Node.js</span><span>Express.js</span><span>Microservices</span><span>Kafka</span><span>RabbitMQ</span><span>Redis</span><span>REST APIs</span></div></article>
+        <article class="skill-group panel"><div class="skill-group-icon"><i class="fa-solid fa-database"></i></div><h3>Data & Storage</h3><div class="tags"><span>MongoDB</span><span>PostgreSQL</span><span>MySQL</span><span>Prisma</span><span>Pinecone</span><span>Neo4j</span></div></article>
+        <article class="skill-group panel"><div class="skill-group-icon"><i class="fa-solid fa-layer-group"></i></div><h3>Frontend</h3><div class="tags"><span>React</span><span>Next.js</span><span>HTML</span><span>CSS</span><span>Tailwind CSS</span></div></article>
+        <article class="skill-group panel"><div class="skill-group-icon"><i class="fa-solid fa-infinity"></i></div><h3>DevOps & Tools</h3><div class="tags"><span>Docker</span><span>Kubernetes</span><span>Git</span><span>GitHub Actions</span><span>Jenkins</span><span>AWS</span></div></article>
+        <article class="skill-group panel"><div class="skill-group-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div><h3>AI & Engineering</h3><div class="tags"><span>LLM APIs</span><span>Gemini</span><span>Groq</span><span>System Design</span><span>DSA</span><span>Computer Networks</span></div></article>
+      </div>
+    </section>
 
-    <section class="section"
-         id="achievements">
+    <section class="section container" id="achievements">
+      <div class="section-heading">
+        <p class="eyebrow">05 / MILESTONES</p>
+        <h2>Progress worth <span class="gradient-text">mentioning.</span></h2>
+      </div>
+      <div class="achievement-grid">
+        <article class="achievement-card panel"><span class="achievement-icon"><i class="fa-solid fa-ranking-star"></i></span><div><h3>1800+ LeetCode rating</h3><p>Solved 400+ DSA problems across competitive programming platforms.</p></div></article>
+        <article class="achievement-card panel"><span class="achievement-icon"><i class="fa-solid fa-people-group"></i></span><div><h3>Teaching Assistant</h3><p>Mentored 50+ students in core concepts and laboratory applications.</p></div></article>
+        <article class="achievement-card panel"><span class="achievement-icon"><i class="fa-solid fa-trophy"></i></span><div><h3>3rd place — Hack-O-Sprint 2.0</h3><p>Led a 5-member team to build an end-to-end solution, placing among 45 teams.</p></div></article>
+        <article class="achievement-card panel"><span class="achievement-icon"><i class="fa-solid fa-people-arrows-left-right"></i></span><div><h3>IEEE Design Coordinator</h3><p>Led a 10+ member team and helped organize 5+ technical events.</p></div></article>
+      </div>
+    </section>
 
-    <h2 class="section-title">
-        Achievements
-    </h2>
-
-    <div class="underline"></div>
-
-    <div class="card">
-
-        <h3>
-            Peak rating of 1850+ on LeetCode with the Knight badge.
-        </h3>
-
-        <br>
-
-        <p>
-            Achieved a peak rating of 1850+ on LeetCode with the Knight badge and solved 600+ DSA problems across LeeCodeChef,and other platforms
-        </p>
-
-    </div>
-
-    <div class="card">
-
-        <h3>
-            Teaching Assistant for Electronic Devices
-        </h3>
-
-        <br>
-
-        <p>
-           Instructed and mentored 50+ undergraduate students in Electronic Devices and Circuits, facilitating understanding of corceptsand lab applications as the teaching assistant.
-        </p>
-
-    </div>
-
-    <div class="card">
-
-        <h3>
-            Secured Rank 3 in Hack-O-Sprint 2.0
-        </h3>
-
-        <br>
-
-        <p>
-           Spearheaded a 5-member team to conceptualize and develop an end-to-end solution, securing 3rd place among 45 teams inO-Sprint 2.0.
-        </p>
-
-    </div>
-
-    <div class="card">
-
-        <h3>
-            IEEE Student Chapter Coordinator
-        </h3>
-
-        <br>
-
-        <p>
-          Led a team of 10+ members as Design Coordinator in the IEEE Student Chapter, organizing 5+ technical events and mabranding, design, and event promotions.
-        </p>
-
-    </div>
-
-</section>
-
-    <!-- Profiles -->
-
-   <section class="section">
-
-    <h2 class="section-title">
-        Profiles
-    </h2>
-
-    <div class="underline"></div>
-
-    <div class="profile-grid">
-
-        <!-- GitHub -->
-
-        <a href="https://github.com/akshatchitransh"
-           target="_blank">
-
-            <i class="devicon-github-original-wordmark colored"></i>
-
-            <h3>GitHub</h3>
-
-        </a>
-
-        <!-- LeetCode -->
-
-        <a href="https://leetcode.com/u/akshat_chitransh/"
-           target="_blank">
-
-            <i class="devicon-leetcode-plain colored"></i>
-
-            <h3>LeetCode</h3>
-
-        </a>
-
-        <!-- LinkedIn -->
-
-        <a href="https://www.linkedin.com/in/geekyakshat/"
-           target="_blank">
-
-            <i class="devicon-linkedin-plain colored"></i>
-
-            <h3>LinkedIn</h3>
-
-        </a>
-
-        <!-- CodeChef -->
-
-        <a href="https://www.codechef.com/users/gang_glide_00"
-           target="_blank">
-
-            <i class="devicon-codeac-original colored"></i>
-
-            <h3>CodeChef</h3>
-
-        </a>
-
-    </div>
-
-</section>
-
-    <!-- Contact -->
-
-   <section class="section" id="contact">
-
-    <h2 class="section-title">
-        Contact Me
-    </h2>
-
-    <div class="underline"></div>
-
-    <div class="contact-grid">
-
-        <div class="contact-card">
-
-            <i class="fa-solid fa-envelope"></i>
-
-            <p>
-                akshat.chitransh3108@gmail.com
-            </p>
-
+    <section class="contact-section container" id="contact">
+      <div class="contact-panel">
+        <p class="eyebrow">06 / CONTACT</p>
+        <h2>Have a good problem?<br><span class="gradient-text">Let's build something.</span></h2>
+        <p>I'm interested in software engineering opportunities, backend systems, developer tooling, and open-source collaboration.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="mailto:akshat.chitransh3108@gmail.com">Email me <i class="fa-solid fa-arrow-right"></i></a>
+          <a class="button button-secondary" href="https://www.linkedin.com/in/geekyakshat/" target="_blank" rel="noopener">Connect on LinkedIn <i class="fa-brands fa-linkedin"></i></a>
         </div>
+      </div>
+    </section>
+  </main>
 
-        <div class="contact-card">
+  <footer class="footer container">
+    <a class="logo" href="#home"><span>ac</span><i>.</i></a>
+    <p>Designed & built by Akshat Chitransh · <span id="year"></span></p>
+    <a href="#home" class="back-top">Back to top ↑</a>
+  </footer>
 
-            <i class="fa-solid fa-phone"></i>
-
-            <p>
-                +91 9301718770
-            </p>
-
-        </div>
-
-        <div class="contact-card">
-
-            <i class="fa-solid fa-location-dot"></i>
-
-            <p>
-                Bhopal, Madhya Pradesh, India
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-    <button id="topBtn">
-        ↑
-    </button>
-
-    <script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
-
 </html>
