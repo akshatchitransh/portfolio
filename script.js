@@ -1,145 +1,62 @@
-// HAMBURGER MENU
 
-const hamburger = document.getElementById("hamburger");
+const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
-hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
 
-// CLOSE MENU AFTER CLICKING A LINK
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation" : "Open navigation"
+    );
 
-document.querySelectorAll(".nav-links a").forEach(link => {
+    menuToggle.innerHTML = isOpen
+      ? '<i class="fa-solid fa-xmark"></i>'
+      : '<i class="fa-solid fa-bars"></i>';
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation");
+      menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
     });
-});
-
-// TYPING ANIMATION
-
-const words = [
-    "Akshat Chitransh",
-    "Full Stack Developer",
-    "Backend Enthusiast",
-    "AI Developer"
-];
-
-let wordIndex = 0;
-let letterIndex = 0;
-let currentWord = "";
-let currentLetters = "";
-
-function typeEffect() {
-
-    if (wordIndex === words.length) {
-        wordIndex = 0;
-    }
-
-    currentWord = words[wordIndex];
-
-    currentLetters = currentWord.slice(
-        0,
-        ++letterIndex
-    );
-
-    document.getElementById("typing").textContent =
-        currentLetters;
-
-    if (currentLetters.length === currentWord.length) {
-
-        setTimeout(() => {
-
-            eraseEffect();
-
-        }, 1200);
-
-    } else {
-
-        setTimeout(typeEffect, 120);
-    }
+  });
 }
 
-function eraseEffect() {
+// Automatically update the footer year.
+const year = document.getElementById("year");
 
-    currentLetters = currentWord.slice(
-        0,
-        --letterIndex
-    );
-
-    document.getElementById("typing").textContent =
-        currentLetters;
-
-    if (letterIndex === 0) {
-
-        wordIndex++;
-
-        setTimeout(typeEffect, 300);
-
-    } else {
-
-        setTimeout(eraseEffect, 60);
-    }
+if (year) {
+  year.textContent = new Date().getFullYear();
 }
 
-typeEffect();
-
-// SCROLL TO TOP BUTTON
-
-const topBtn = document.getElementById("topBtn");
-
-window.addEventListener("scroll", () => {
-
-    if (
-        document.body.scrollTop > 300 ||
-        document.documentElement.scrollTop > 300
-    ) {
-
-        topBtn.style.display = "block";
-
-    } else {
-
-        topBtn.style.display = "none";
-    }
-});
-
-topBtn.addEventListener("click", () => {
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
-});
-
-// ACTIVE NAVBAR LINK
-
-const sections = document.querySelectorAll("section");
+// Highlight the navigation item for the visible section.
+const sections = document.querySelectorAll("main section[id]");
 const navItems = document.querySelectorAll(".nav-links a");
 
-window.addEventListener("scroll", () => {
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
 
-    let current = "";
+        navItems.forEach((link) => {
+          const active =
+            link.getAttribute("href") === `#${entry.target.id}`;
 
-    sections.forEach(section => {
+          link.classList.toggle("active", active);
+        });
+      });
+    },
+    {
+      rootMargin: "-25% 0px -60% 0px",
+      threshold: 0
+    }
+  );
 
-        const sectionTop = section.offsetTop;
-
-        if (pageYOffset >= sectionTop - 150) {
-            current = section.getAttribute("id");
-        }
-
-    });
-
-    navItems.forEach(link => {
-
-        link.classList.remove("active");
-
-        if (
-            link.getAttribute("href") === "#" + current
-        ) {
-
-            link.classList.add("active");
-        }
-    });
-
-});
+  sections.forEach((section) => observer.observe(section));
+}
